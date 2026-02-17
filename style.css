@@ -1,0 +1,214 @@
+/* TIPOGRAFÍAS */
+.serif-title { 
+    font-family: 'Fraunces', serif; 
+}
+
+.text{
+    color: #b84802;
+}
+
+.logo-font { 
+    font-family: 'Gochi Hand', cursive; 
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+}
+
+/* FONDO ANIMADO DE BURBUJAS */
+.bubbles {
+    background-color: #FFD166;
+    position: relative;
+    overflow: hidden;
+}
+
+.bubbles::before {
+    content: "";
+    position: absolute;
+    top: -100%; 
+    left: 0; 
+    width: 100%; 
+    height: 200%;
+    background-image:
+        radial-gradient(circle, rgba(244,162,97,0.4) 40px, transparent 42px),
+        radial-gradient(circle, rgba(230,57,70,0.3) 55px, transparent 57px),
+        radial-gradient(circle, rgba(72,149,239,0.3) 30px, transparent 32px),
+        radial-gradient(circle, rgba(6,214,160,0.3) 48px, transparent 50px),
+        radial-gradient(circle, rgba(131,56,236,0.25) 60px, transparent 62px),
+        radial-gradient(circle, rgba(255,255,255,0.3) 25px, transparent 27px);
+    background-position: 15% 25%, 50% 10%, 80% 35%, 20% 70%, 75% 80%, 95% 15%;
+    background-size: 600px 700px;
+    animation: confetiMove 25s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes confetiMove {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(50%); }
+}
+
+/* BOTÓN MODO INFANCIA - ESTADO BASE (APAGADO) */
+.btn-gradient {
+    background: linear-gradient(90deg, #F4A261 0%, #E63946 100%);
+    color: white;
+    box-shadow: 0 4px 10px rgba(230,57,70,0.3);
+    transition: all 0.5s ease;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ESTADO ACTIVO (MODO INFANCIA ENCENDIDO) */
+.btn-gradient.activo {
+    background: linear-gradient(90deg, #67178d 0%, #9e3cc9 100%);
+    box-shadow: 0 0 20px rgba(88, 9, 117, 0.6);
+    transform: scale(1.05);
+}
+
+/* EFECTO DIFUMINADO INTERNO */
+.btn-gradient.activo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.3), transparent 70%);
+    opacity: 0.6;
+    animation: brilloInfancia 2s infinite alternate;
+}
+
+@keyframes brilloInfancia {
+    from { opacity: 0.3; }
+    to { opacity: 0.7; }
+}
+
+
+/* ================= MODAL CREA TU PROPIA EXPERIENCIA ================= */
+
+#experienciaModal h3 {
+  color: #F4A261;
+}
+
+#experienciaModal p {
+  color: #E76F51;
+  font-size: 1rem;
+}
+
+/* Línea vertical amarilla para preguntas */
+#experienciaModal h3::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 100%;
+  background-color: #FFD166;
+  margin-right: 12px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+/* Botones del modal */
+.btn-exp {
+  background-color: #FFF7E6;
+  border: 2px solid #FFD166;
+  color: #E76F51;
+  padding: 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-exp:hover {
+  background-color: #FFD166;
+  color: #264653;
+  transform: scale(1.03);
+}
+
+/* Recuadro principal */
+#experienciaModal > div {
+  border-left: 6px solid #FFD166;
+}
+
+/* Botones finales */
+#experienciaModal button {
+  outline: none;
+}
+
+/* Responsive texto */
+@media (max-width: 640px) {
+  #experienciaModal h3 {
+    font-size: 1.8rem;
+  }
+}
+ 
+/* ===== MANIFIESTO MONTAÑA REKREA ===== */
+
+.manifiesto-montana {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 80px;
+}
+
+.circulo {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    position: absolute;
+    color: white;
+    text-align: center;
+    padding: 45px 30px;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.circulo h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.circulo p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ===== MONTAÑAS DECORATIVAS NUESTRO PROPÓSITO ===== */
+
+.proposito-section {
+    position: relative;
+    background: #efe5d8; /* tu fondo actual */
+    overflow: hidden;
+    padding-bottom: 150px;
+}
+
+/* Montaña 1 */
+.proposito-section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    width: 110%;
+    height: 200px;
+    background: #ff9f43; /* naranja */
+    clip-path: polygon(0% 100%, 25% 40%, 50% 70%, 75% 35%, 100% 100%);
+    z-index: 1;
+}
+
+/* Montaña 2 */
+.proposito-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    width: 110%;
+    height: 150px;
+    background: #feca57; /* amarillo */
+    clip-path: polygon(0% 100%, 20% 60%, 45% 30%, 70% 55%, 100% 100%);
+    z-index: 2;
+}
+
