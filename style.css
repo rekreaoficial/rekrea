@@ -226,3 +226,8 @@ body {
 #logoFooter{
     font-family:"rekrea";
 }
+
+.font-rekrea {
+  font-family: "rekrea";
+  font-size: 1.5rem; /* equivale aprox a text-2xl */
+}
