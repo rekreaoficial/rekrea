@@ -212,3 +212,17 @@ body {
     z-index: 2;
 }
 
+
+@font-face {
+    font-family: "rekrea" ;
+    src: url(GochiHand-Regular.ttf);
+
+}
+
+#logoHeader{
+    font-family:"rekrea";
+}
+
+#logoFooter{
+    font-family:"rekrea";
+}
